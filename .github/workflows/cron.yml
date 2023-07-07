@@ -1,0 +1,12 @@
+name: auto-update-cron
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  build:
+    name: Trigger Site Rebuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Hook
+        run: curl -X POST "${{secrets.VERCEL_HOOK}}"
