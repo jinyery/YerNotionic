@@ -92,6 +92,8 @@ const Footer = ({ fullWidth }) => {
 
         <div className='text-gray-400 text-xs font-light py-4'>
           © {from === y || !from ? y : `${from} - ${y}`} | {BLOG.author}
+          {BLOG.ICP ? " | " : ""}
+          {BLOG.ICP && (<a className='underline' href='https://beian.miit.gov.cn/'>{BLOG.ICP}</a>)}
           <p className='md:float-right'>
             {t.FOOTER.COPYRIGHT_START}
             <a className='underline' href={`${t.FOOTER.COPYRIGHT_LINK}`}>

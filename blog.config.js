@@ -74,7 +74,8 @@ const BLOG = {
       issue_term: "pathname"
     }
   },
-  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  ICP: '冀ICP备2021023021号-1'
 }
 // export default BLOG
 module.exports = BLOG
